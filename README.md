@@ -27,7 +27,10 @@ Motor Control: The mapped value is then sent to the ESC to control the motor spe
 Safety Precautions
 Ensure the fuse is appropriately rated to prevent overcurrent conditions.
 Double-check all connections before powering the circuit.
-Project Video
+
+
+
+[Project Video](https://youtu.be/lskjYCXQ2Z0?feature=shared)
 
 
 
