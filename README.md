@@ -1,18 +1,23 @@
 # -Brushless-Motor-Control-with-Potentiometer
- Thank you for the clarification. Here is the revised GitHub post:  Arduino Brushless Motor Control with Potentiometer This project demonstrates how to control a brushless motor using an Arduino, a potentiometer, and an ESC (Electronic Speed Controller). By adjusting the potentiometer, the Arduino changes the speed of the motor.
-Components Used
-Arduino Uno
-Power Distribution Board
-Breadboard
-ESC (Electronic Speed Controller)
-Brushless Motor
-Fuse
-Potentiometer
-Circuit Diagram
+#include <Servo.h>
 
-Connections
-ESC Signal Pin: Connect to Arduino pin 2
-ESC Power Pins: Connect to the Power Distribution Board
-Potentiometer Middle Pin: Connect to Arduino analog pin A0
-Potentiometer Other Pins: Connect to 5V and GND
+#define ESC_PIN 2
+
+Servo esc;
+
+void setup() 
+{
+  esc.attach(ESC_PIN, 1000, 2000);
+  esc.write(0);
+  delay(2000);
+}
+
+void loop() 
+{
+  int potValue = analogRead(A0);
+  potValue = constrain(potValue, 550, 1023);  // Read upper half of potentiometer value.
+  int motorSpeed = map(potValue, 550, 1023, 0, 180);
+  esc.write(motorSpeed);  
+}
+
 
