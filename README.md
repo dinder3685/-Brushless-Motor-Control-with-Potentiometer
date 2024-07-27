@@ -1,4 +1,34 @@
 # -Brushless-Motor-Control-with-Potentiometer
+/*
+Components Used
+Arduino Uno
+Power Distribution Board
+Breadboard
+ESC (Electronic Speed Controller)
+Brushless Motor
+Fuse
+Potentiometer
+Circuit Diagram
+
+Connections
+ESC Signal Pin: Connect to Arduino pin 2
+ESC Power Pins: Connect to the Power Distribution Board
+Potentiometer Middle Pin: Connect to Arduino analog pin A0
+Potentiometer Other Pins: Connect to 5V and GND
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 #include <Servo.h>
 
 #define ESC_PIN 2
